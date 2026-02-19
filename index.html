@@ -297,25 +297,55 @@
 				</a>
 			</li>
 			<li class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link active">
+				<a class="sidebar-nav-link active" onclick="toggleSubMenu(this)">
 					<div>
 						<i class="fab fa-accusoft"></i>
 					</div>
 					<span>Lorem</span>
+					<i class="fas fa-chevron-right dropdown-icon"></i>
 				</a>
+				<ul class="sidebar-nav-sub">
+					<li class="sidebar-nav-item">
+						<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
+							<div>
+								<i class="fas fa-tasks"></i>
+							</div>
+							<span>Morbi</span>
+							<i class="fas fa-chevron-right dropdown-icon"></i>
+						</a>
+						<ul class="sidebar-nav-sub">
+							<li class="sidebar-nav-item">
+								<a href="#" class="sidebar-nav-link">
+									<div>
+										<i class="fas fa-spinner"></i>
+									</div>
+									<span>Praesent</span>
+								</a>
+							</li>
+							<li class="sidebar-nav-item">
+								<a href="#" class="sidebar-nav-link">
+									<div>
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<span>Pellentesque</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sidebar-nav-item">
+						<a href="#" class="sidebar-nav-link">
+							<div>
+								<i class="fas fa-bug"></i>
+							</div>
+							<span>Morbi</span>
+						</a>
+					</li>
+				</ul>
 			</li>
 			<li  class="sidebar-nav-item">
 				<a href="#" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-tasks"></i>
-					</div>
-					<span>Morbi</span>
-				</a>
-			</li>
-			<li  class="sidebar-nav-item">
-				<a href="#" class="sidebar-nav-link">
-					<div>
-						<i class="fas fa-spinner"></i>
+						<i class="fas fa-chart-line"></i>
 					</div>
 					<span>Praesent</span>
 				</a>

@@ -1,7 +1,7 @@
-const primaryColor = '#4834d4'
-const warningColor = '#f0932b'
-const successColor = '#6ab04c'
-const dangerColor = '#eb4d4b'
+const primaryColor = '#6366f1'
+const warningColor = '#f59e0b'
+const successColor = '#22c55e'
+const dangerColor = '#ef4444'
 
 const themeCookieName = 'theme'
 const themeDark = 'dark'
@@ -54,6 +54,14 @@ function collapseSidebar() {
 	body.classList.toggle('sidebar-expand')
 }
 
+function toggleSubMenu(el) {
+	el.classList.toggle('open')
+	let subMenu = el.nextElementSibling
+	if (subMenu) {
+		subMenu.classList.toggle('open')
+	}
+}
+
 window.onclick = function(event) {
 	openCloseDropdown(event)
 }
@@ -93,15 +101,19 @@ var data = {
 		label: 'Completed',
 		borderColor: successColor,
 		data: [120, 115, 130, 100, 123, 88, 99, 66, 120, 52, 59],
-		borderWidth: 2,
-		lineTension: 0,
+		borderWidth: 3,
+		lineTension: 0.4,
+		pointRadius: 4,
+		pointHoverRadius: 6,
 	}, {
 		fill: false,
 		label: 'Issues',
 		borderColor: dangerColor,
 		data: [66, 44, 12, 48, 99, 56, 78, 23, 100, 22, 47],
-		borderWidth: 2,
-		lineTension: 0,
+		borderWidth: 3,
+		lineTension: 0.4,
+		pointRadius: 4,
+		pointHoverRadius: 6,
 	}]
 }
 
