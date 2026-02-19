@@ -33,13 +33,116 @@
 		</ul>
 	</div>
 	<!-- end navbar -->
-	<!-- sidebar -->
-		<div class="sidebar overlay-scrollbar scrollbar-hover">
+		<!-- sidebar -->
+	<div class="sidebar overlay-scrollbar scrollbar-hover">
 		<ul class="sidebar-nav">
 			<li class="sidebar-nav-item">
-				<a href="index.html" class="sidebar-nav-link ">
+				<a href="index.html" class="sidebar-nav-link">
 					<div><i class="fas fa-tachometer-alt"></i></div>
-
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
+					<div><i class="fas fa-users"></i></div>
+					<span>Customer Mgmt</span>
+					<i class="fas fa-chevron-right dropdown-icon"></i>
+				</a>
+				<ul class="sidebar-nav-sub">
+					<li class="sidebar-nav-item">
+						<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
+							<div><i class="fas fa-user-friends"></i></div>
+							<span>Customers</span>
+							<i class="fas fa-chevron-right dropdown-icon"></i>
+						</a>
+						<ul class="sidebar-nav-sub">
+							<li class="sidebar-nav-item">
+								<a href="customers.html" class="sidebar-nav-link">
+									<div><i class="far fa-circle"></i></div>
+									<span>Residential</span>
+								</a>
+							</li>
+							<li class="sidebar-nav-item">
+								<a href="customers.html" class="sidebar-nav-link">
+									<div><i class="far fa-circle"></i></div>
+									<span>Commercial</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sidebar-nav-item">
+						<a href="accounts.html" class="sidebar-nav-link">
+							<div><i class="fas fa-id-card"></i></div>
+							<span>Accounts</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
+					<div><i class="fas fa-faucet"></i></div>
+					<span>Metering</span>
+					<i class="fas fa-chevron-right dropdown-icon"></i>
+				</a>
+				<ul class="sidebar-nav-sub">
+					<li class="sidebar-nav-item">
+						<a href="meters.html" class="sidebar-nav-link">
+							<div><i class="fas fa-boxes"></i></div>
+							<span>Meter Inventory</span>
+						</a>
+					</li>
+					<li class="sidebar-nav-item">
+						<a href="readings.html" class="sidebar-nav-link">
+							<div><i class="fas fa-clipboard-list"></i></div>
+							<span>Meter Readings</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
+					<div><i class="fas fa-file-invoice-dollar"></i></div>
+					<span>Billing & Coll</span>
+					<i class="fas fa-chevron-right dropdown-icon"></i>
+				</a>
+				<ul class="sidebar-nav-sub">
+					<li class="sidebar-nav-item">
+						<a href="billing.html" class="sidebar-nav-link">
+							<div><i class="fas fa-receipt"></i></div>
+							<span>Invoices</span>
+						</a>
+					</li>
+					<li class="sidebar-nav-item">
+						<a href="payments.html" class="sidebar-nav-link">
+							<div><i class="fas fa-hand-holding-usd"></i></div>
+							<span>Payments</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sidebar-nav-item">
+				<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
+					<div><i class="fas fa-cogs"></i></div>
+					<span>Operations</span>
+					<i class="fas fa-chevron-right dropdown-icon"></i>
+				</a>
+				<ul class="sidebar-nav-sub">
+					<li class="sidebar-nav-item">
+						<a href="dma.html" class="sidebar-nav-link">
+							<div><i class="fas fa-map-marked-alt"></i></div>
+							<span>DMA Management</span>
+						</a>
+					</li>
+					<li class="sidebar-nav-item">
+						<a href="nrw.html" class="sidebar-nav-link">
+							<div><i class="fas fa-chart-pie"></i></div>
+							<span>NRW Analysis</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 	<!-- end sidebar -->
 	<!-- main content -->
 	<div class="wrapper">

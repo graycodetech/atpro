@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WaterPro - Utility Management</title>
+	<title>WaterPro - Account Details</title>
 
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="icon" type="image/png" href="assets/AT-pro-logo.png"/>
@@ -59,12 +59,6 @@
 								<span>High consumption alert: DMA-04<br><span>5 mins ago</span></span>
 							</a>
 						</li>
-						<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
-								<div><i class="fas fa-file-invoice"></i></div>
-								<span>1,200 bills generated for July<br><span>1 hour ago</span></span>
-							</a>
-						</li>
 					</div>
 					<div class="dropdown-menu-footer">
 						<span>View all notifications</span>
@@ -98,7 +92,7 @@
 	<div class="sidebar overlay-scrollbar scrollbar-hover">
 		<ul class="sidebar-nav">
 			<li class="sidebar-nav-item">
-				<a href="index.html" class="sidebar-nav-link active">
+				<a href="index.html" class="sidebar-nav-link">
 					<div><i class="fas fa-tachometer-alt"></i></div>
 					<span>Dashboard</span>
 				</a>
@@ -208,117 +202,191 @@
 	<!-- main content -->
 	<div class="wrapper">
 		<div class="row">
-			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-primary">
-					<p><i class="fas fa-users"></i></p>
-					<h3>12.4k</h3>
-					<p>Total Customers</p>
-				</div>
-			</div>
-			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-warning">
-					<p><i class="fas fa-tint-slash"></i></p>
-					<h3>24%</h3>
-					<p>NRW Level</p>
-				</div>
-			</div>
-			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-success">
-					<p><i class="fas fa-hand-holding-usd"></i></p>
-					<h3>$840k</h3>
-					<p>Coll. this month</p>
-				</div>
-			</div>
-			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-danger">
-					<p><i class="fas fa-tools"></i></p>
-					<h3>12</h3>
-					<p>Open Leak Jobs</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-8 col-m-12 col-sm-12">
-				<div class="card">
-					<div class="card-header">
-						<h3>Recent Meter Readings</h3>
-						<i class="fas fa-ellipsis-h"></i>
-					</div>
-					<div class="card-content">
-						<table>
-							<thead>
-								<tr>
-									<th>Account #</th>
-									<th>Customer</th>
-									<th>Prev Reading</th>
-									<th>Current</th>
-									<th>Consumption (m³)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>ACC-00123</td>
-									<td>John Doe</td>
-									<td>1,245</td>
-									<td>1,260</td>
-									<td>15</td>
-								</tr>
-								<tr>
-									<td>ACC-00456</td>
-									<td>Jane Smith</td>
-									<td>890</td>
-									<td>912</td>
-									<td>22</td>
-								</tr>
-								<tr>
-									<td>ACC-00789</td>
-									<td>Robert Brown</td>
-									<td>2,105</td>
-									<td>2,130</td>
-									<td>25</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
 			<div class="col-4 col-m-12 col-sm-12">
 				<div class="card">
 					<div class="card-header">
-						<h3>Billing Status</h3>
-						<i class="fas fa-ellipsis-h"></i>
+						<h3>Account Profile</h3>
 					</div>
 					<div class="card-content">
-						<div class="progress-wrapper">
-							<p>Paid Invoices <span class="float-right">75%</span></p>
-							<div class="progress">
-								<div class="bg-success" style="width: 75%"></div>
+						<div class="profile-info">
+							<div class="profile-item">
+								<label>Account Number</label>
+								<p>ACC-00123</p>
 							</div>
-						</div>
-						<div class="progress-wrapper">
-							<p>Pending Payment <span class="float-right">20%</span></p>
-							<div class="progress">
-								<div class="bg-warning" style="width:20%"></div>
+							<div class="profile-item">
+								<label>Customer Name</label>
+								<p>John Doe</p>
 							</div>
-						</div>
-						<div class="progress-wrapper">
-							<p>Overdue <span class="float-right">5%</span></p>
-							<div class="progress">
-								<div class="bg-danger" style="width:5%"></div>
+							<div class="profile-item">
+								<label>Status</label>
+								<p><span class="dot"><i class="bg-success"></i> Active</span></p>
+							</div>
+							<div class="profile-item">
+								<label>Outstanding Balance</label>
+								<p class="text-danger" style="font-weight: 600;">$45.00</p>
+							</div>
+							<div class="profile-item">
+								<label>Service Address</label>
+								<p>123 Pine St, Springville</p>
+							</div>
+							<div class="profile-item">
+								<label>Category</label>
+								<p>Residential (Domestic)</p>
+							</div>
+							<div class="profile-item">
+								<label>Contact</label>
+								<p>+1 555-0199</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 col-m-12 col-sm-12">
+			<div class="col-8 col-m-12 col-sm-12">
 				<div class="card">
-					<div class="card-header">
-						<h3>Water Production vs Consumption (last 6 months)</h3>
+					<div class="card-header no-border">
+						<ul class="tab-nav">
+							<li class="tab-nav-item active" onclick="openTab(event, 'billing')">Billing</li>
+							<li class="tab-nav-item" onclick="openTab(event, 'payments')">Payments</li>
+							<li class="tab-nav-item" onclick="openTab(event, 'statement')">Statement</li>
+							<li class="tab-nav-item" onclick="openTab(event, 'readings')">Readings</li>
+							<li class="tab-nav-item" onclick="openTab(event, 'connection')">Connection</li>
+						</ul>
 					</div>
 					<div class="card-content">
-						<canvas id="myChart"></canvas>
+						<div id="billing" class="tab-content active">
+							<table>
+								<thead>
+									<tr>
+										<th>Bill #</th>
+										<th>Period</th>
+										<th>Amount</th>
+										<th>Due Date</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>INV-2023-07</td>
+										<td>July 2023</td>
+										<td>$45.00</td>
+										<td>15/08/2023</td>
+										<td><span class="dot"><i class="bg-warning"></i> Pending</span></td>
+									</tr>
+									<tr>
+										<td>INV-2023-06</td>
+										<td>June 2023</td>
+										<td>$38.50</td>
+										<td>15/07/2023</td>
+										<td><span class="dot"><i class="bg-success"></i> Paid</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="payments" class="tab-content">
+							<table>
+								<thead>
+									<tr>
+										<th>Receipt #</th>
+										<th>Date</th>
+										<th>Method</th>
+										<th>Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>RCP-99812</td>
+										<td>12/07/2023</td>
+										<td>Credit Card</td>
+										<td>$38.50</td>
+									</tr>
+									<tr>
+										<td>RCP-99450</td>
+										<td>10/06/2023</td>
+										<td>Cash</td>
+										<td>$42.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="statement" class="tab-content">
+							<table>
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Description</th>
+										<th>Debit</th>
+										<th>Credit</th>
+										<th>Balance</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>01/07/2023</td>
+										<td>Balance Forward</td>
+										<td></td>
+										<td></td>
+										<td>$0.00</td>
+									</tr>
+									<tr>
+										<td>05/07/2023</td>
+										<td>Bill INV-2023-07</td>
+										<td>$45.00</td>
+										<td></td>
+										<td>$45.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="readings" class="tab-content">
+							<table>
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Reading</th>
+										<th>Consumption</th>
+										<th>Type</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>01/07/2023</td>
+										<td>1,260</td>
+										<td>15 m³</td>
+										<td>Manual</td>
+									</tr>
+									<tr>
+										<td>01/06/2023</td>
+										<td>1,245</td>
+										<td>18 m³</td>
+										<td>Manual</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="connection" class="tab-content">
+							<div class="profile-info">
+								<div class="profile-item">
+									<label>Meter Serial Number</label>
+									<p>MET-5542-ABC</p>
+								</div>
+								<div class="profile-item">
+									<label>Meter Size</label>
+									<p>15mm (1/2")</p>
+								</div>
+								<div class="profile-item">
+									<label>Installation Date</label>
+									<p>15/03/2021</p>
+								</div>
+								<div class="profile-item">
+									<label>Last Service Date</label>
+									<p>20/05/2023</p>
+								</div>
+								<div class="profile-item">
+									<label>DMA / Zone</label>
+									<p>DMA-01 (North Central)</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -328,6 +396,5 @@
 	<!-- import script -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 	<script src="index.js"></script>
-	<!-- end import script -->
 </body>
 </html>
