@@ -284,7 +284,7 @@
 	</div>
 	<!-- end navbar -->
 	<!-- sidebar -->
-	<div class="sidebar">
+	<div class="sidebar overlay-scrollbar scrollbar-hover">
 		<ul class="sidebar-nav">
 			<li class="sidebar-nav-item">
 				<a href="#" class="sidebar-nav-link">
@@ -308,37 +308,56 @@
 					<li class="sidebar-nav-item">
 						<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
 							<div>
-								<i class="fas fa-tasks"></i>
+								<i class="fas fa-folder"></i>
 							</div>
-							<span>Morbi</span>
+							<span>Projects</span>
 							<i class="fas fa-chevron-right dropdown-icon"></i>
 						</a>
 						<ul class="sidebar-nav-sub">
 							<li class="sidebar-nav-item">
 								<a href="#" class="sidebar-nav-link">
 									<div>
-										<i class="fas fa-spinner"></i>
+										<i class="far fa-circle"></i>
 									</div>
-									<span>Praesent</span>
+									<span>Active Projects</span>
 								</a>
 							</li>
 							<li class="sidebar-nav-item">
 								<a href="#" class="sidebar-nav-link">
 									<div>
-										<i class="fas fa-check-circle"></i>
+										<i class="far fa-circle"></i>
 									</div>
-									<span>Pellentesque</span>
+									<span>Completed Projects</span>
 								</a>
 							</li>
 						</ul>
 					</li>
 					<li class="sidebar-nav-item">
-						<a href="#" class="sidebar-nav-link">
+						<a class="sidebar-nav-link" onclick="toggleSubMenu(this)">
 							<div>
-								<i class="fas fa-bug"></i>
+								<i class="fas fa-file-alt"></i>
 							</div>
-							<span>Morbi</span>
+							<span>Reports</span>
+							<i class="fas fa-chevron-right dropdown-icon"></i>
 						</a>
+						<ul class="sidebar-nav-sub">
+							<li class="sidebar-nav-item">
+								<a href="#" class="sidebar-nav-link">
+									<div>
+										<i class="far fa-circle"></i>
+									</div>
+									<span>Daily Report</span>
+								</a>
+							</li>
+							<li class="sidebar-nav-item">
+								<a href="#" class="sidebar-nav-link">
+									<div>
+										<i class="far fa-circle"></i>
+									</div>
+									<span>Monthly Report</span>
+								</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</li>
