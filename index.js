@@ -75,9 +75,6 @@ function closeAllDropdown() {
 
 function openCloseDropdown(event) {
 	if (!event.target.matches('.dropdown-toggle')) {
-		// 
-		// Close dropdown when click out of dropdown menu
-		// 
 		closeAllDropdown()
 	} else {
 		var toggle = event.target.dataset.toggle
@@ -91,37 +88,83 @@ function openCloseDropdown(event) {
 	}
 }
 
-var ctx = document.getElementById('myChart')
-ctx.height = 500
-ctx.width = 500
-var data = {
-	labels: ['January', 'February', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-	datasets: [{
-		fill: false,
-		label: 'Completed',
-		borderColor: successColor,
-		data: [120, 115, 130, 100, 123, 88, 99, 66, 120, 52, 59],
-		borderWidth: 3,
-		lineTension: 0.4,
-		pointRadius: 4,
-		pointHoverRadius: 6,
-	}, {
-		fill: false,
-		label: 'Issues',
-		borderColor: dangerColor,
-		data: [66, 44, 12, 48, 99, 56, 78, 23, 100, 22, 47],
-		borderWidth: 3,
-		lineTension: 0.4,
-		pointRadius: 4,
-		pointHoverRadius: 6,
-	}]
+// Charts
+function initDashboardChart() {
+	var ctx = document.getElementById('myChart')
+	if (!ctx) return
+
+	ctx.height = 500
+	ctx.width = 500
+	var data = {
+		labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+		datasets: [{
+			fill: false,
+			label: 'Production (m³)',
+			borderColor: primaryColor,
+			data: [1500, 1450, 1600, 1550, 1700, 1650],
+			borderWidth: 3,
+			lineTension: 0.4,
+			pointRadius: 4,
+		}, {
+			fill: false,
+			label: 'Consumption (m³)',
+			borderColor: successColor,
+			data: [1100, 1080, 1200, 1150, 1300, 1250],
+			borderWidth: 3,
+			lineTension: 0.4,
+			pointRadius: 4,
+		}]
+	}
+
+	new Chart(ctx, {
+		type: 'line',
+		data: data,
+		options: {
+			maintainAspectRatio: false,
+		}
+	})
 }
 
-var lineChart = new Chart(ctx, {
-	type: 'line',
-	data: data,
-	options: {
-		maintainAspectRatio: false,
-		bezierCurve: false,
+function initNRWCharts() {
+	var pieCtx = document.getElementById('nrwPieChart')
+	if (pieCtx) {
+		new Chart(pieCtx, {
+			type: 'pie',
+			data: {
+				labels: ['Billed Auth. Consumption', 'Unbilled Auth. Consumption', 'Apparent Losses', 'Real Losses'],
+				datasets: [{
+					data: [76, 4, 5, 15],
+					backgroundColor: [successColor, primaryColor, warningColor, dangerColor]
+				}]
+			}
+		})
 	}
-})
+
+	var barCtx = document.getElementById('nrwBarChart')
+	if (barCtx) {
+		new Chart(barCtx, {
+			type: 'bar',
+			data: {
+				labels: ['DMA-01', 'DMA-02', 'DMA-03', 'DMA-04'],
+				datasets: [{
+					label: 'NRW %',
+					backgroundColor: warningColor,
+					data: [18, 24, 32, 15]
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: 100
+						}
+					}]
+				}
+			}
+		})
+	}
+}
+
+initDashboardChart()
+initNRWCharts()
